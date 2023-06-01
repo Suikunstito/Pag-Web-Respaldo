@@ -1,0 +1,100 @@
+
+.nav-header ul, .nav-header-admn ul , .nav-header-user ul {
+    list-style: none;
+    text-align: right;
+}
+
+
+.nav-header ul li, .nav-header-admn ul li , .nav-header-user ul li{
+    display: inline-flex;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.nav-header ul li a, .nav-header-admn ul li a, .nav-header-user ul li a {
+    color: white;
+}
+
+.nav-vitrina ul {
+    list-style: none;
+}
+
+.nav-vitrina ul li {
+    display: inline;
+    padding: 10px;
+}
+
+.nav-footer ul {
+    list-style: none;
+    text-align: center;
+}
+
+.nav-footer ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.carusel {
+    border: 1px solid blue; 
+}
+
+.nav-nosotros ul {
+    list-style: none;
+    
+}
+
+.nav-nosotros ul li {
+    padding: 10px;
+}
+.producto {
+    width: 150px;
+    height: 200px;
+    
+}
+.persona {
+    width: 200px;
+    height: 200px;
+}
+
+.nav-ingreso {
+    text-align: center;
+}
+
+.ropa {
+    width: 100px;
+}
+
+
+
+.nav-tabla {
+    padding-top: 10px;
+    overflow-x: auto;
+}
+
+.nav-tabla th {
+    white-space: nowrap;
+    
+}
+
+.nav-tabla td {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.carrito table, .carrito th, .carrito td {
+    border: 1px solid white;
+}
+
+.nav-admin li {
+    padding-bottom: 10px;
+}
+.horizontal-table {
+    white-space: nowrap;
+  }
+  
+.horizontal-table td {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 5px;
+    margin-right: 5px;
+  }

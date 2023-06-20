@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+<!--CSS-->
+{% block stylesheet %}
+<link href="{% static 'core/css/Style.css'%}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container" style="height: 120vh">
+    <div class="row m-2">
+        <div class="col-lg-6" style="text-align: center; height: 500px; margin-top: 100px;">
+            <img src="{% static 'core/img/saco.css'%}" alt="" style="width: 500px; height: 500px;">
+        </div>
+        <div class="col-lg-6" style="text-align: center; margin-top: 200px;">
+            <p class="text-uppercase ">Ficha de Producto</p>
+            <p class="text-primary display-6">Disponible en Bodega</p>
+            <p class="display-5">$8.000 <br></p>
+            <p class="text-uppercase text-decoration-underline">Saco de alimento Royan Canin <br></p>
+            <p class="text-align">Descripción: <br>
+                Royan Canin, 3kg, Savor Pavo, Adulto <br>
+                Stock: 3 unidades<br>
+            </p>
+            <button type="button" class="btn btn-primary text-uppercase">
+                comprar ahora
+            </button>
+            <button type="button" class="btn btn-secondary text-uppercase">
+                Agregar al carrito
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}

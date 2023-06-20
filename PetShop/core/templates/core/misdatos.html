@@ -1,0 +1,79 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+<!--CSS-->
+{% block stylesheet %}
+<link href="{% static 'core/css/Style.css'%}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <h1 style="padding: 20px; margin-top: 100px;">Mis Datos</h1>
+            <!-- Inicio form -->
+            <form method="POST" id="formulario1" action="recibir_datos">
+                <div class="form-group">
+                    <br>
+                    <label for="rut">Rut</label>
+                    <input type="text" id="rut" name="rut" class="form-control" placeholder="Ingrese su nombre"
+                        value="20.919.103-2" />
+                </div>
+                <div class="form-group">
+                    <br>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nom" name="nom" class="form-control" placeholder="Ingrese su nombre aquí"
+                        value="Felipe" />
+                </div>
+                <div class="form-group">
+                    <br>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apel" class="form-control"
+                        placeholder="Ingrese su apellido aquí" value="Leiva" />
+                </div>
+                <div class="form-group">
+                    <br>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Ingrese su email aquí"
+                        value="fe.leivam@duocuc.cl" />
+                </div>
+                <div class="from-group">
+                    <label for="direc">Direccion</label>
+                    <textarea class="form-control" name="direc" id="direc" cols="5" rows="2"
+                        placeholder="Ingrese su Direccion">Santiago Chile</textarea>
+                </div>
+                <div class="from-group">
+                    <br>
+                    <label for="suscripcion">Suscripion:</label>
+                    <input type="checkbox" id="suscripcion"> Deseo
+                    subscribirme con un aporte de $3000 mensuales y obtener un 5% de descuento en mis
+                    compras
+                </div>
+                <div class="form-group">
+                    <br>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control"
+                        placeholder="Ingresar contraseña del al menos 5 caracteres" value="**********" />
+                </div>
+                <div class="form-group">
+                    <br>
+                    <label for="password2">Repetir Contraseña</label>
+                    <input type="password" id="password2" name="password2" class="form-control"
+                        placeholder="Repetir contraseña digitada anteriormente" value="**********" />
+                </div>
+                <br>
+                <button id="id_btnenviar" type="submit" class="btn btn-primary">
+                    Guardar
+                </button>
+                <button id="id_btnlimpiar" type="submit" class="btn btn-segundary">
+                    Limpiar
+                </button>
+            </form>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <img src="{% static 'core/img/alien.png' %}" alt="alien" style="width: 300px; height: 300px; margin-top: 250px;">
+            <input type="file" value="Examinar" style="margin-top: 100px;" class="btn btn-primary form-control-file ">
+        </div>
+    </div>
+</div>
+{% endblock %}

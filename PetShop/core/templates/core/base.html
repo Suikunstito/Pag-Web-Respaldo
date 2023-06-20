@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tienda de Tony Stark</title>
+    
+    <!--<link rel="shortcut icon" href="{% static 'core/img/favicon.png' %}" type="image/x-icon" /> ESTO ES PA LA IMAGEN DE ARRIBITA-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--CSS-->
+    {% block stylesheet %} {% endblock %}
+
+</head>
+
+<body style="padding: 10px;" class="bg-dark text-white">
+    {% block navbar %}
+    <div id="header" style="padding-bottom: 40px">
+        <nav class="navbar navbar-expand-lg fixed-top bg-black" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'core/img/dog-png.png' %}" alt="" style="height: 50px; width: 70px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-header"
+                    aria-controls="nav-header" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-header">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'registro' %}">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'ingresar' %}">Ingresar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'misdatos' %}">Mis datos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'miscompras' %}">Mis compras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'administracion' %}">Administración</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'ropa' %}">Ropa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'carrito' %}">Carrito</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    {% endblock %}
+
+    <div class="content container" style="padding-bottom: 40px">
+        
+        {% block content %} 
+
+        {% endblock %}
+
+    </div>
+
+    
+    <!--FOOTER-->
+    {% block footer %}
+    <nav class="navbar navbar-expand-lg fixed-bottom justify-content-center bg-black" data-bs-theme="dark">
+        <p>Zomboy GM 2023 | Todos los derechos reservados | Santiago, Chile</p>
+    </nav>
+    {% endblock %}
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'core/js/validador.js' %}"></script>
+</body>
+</html>

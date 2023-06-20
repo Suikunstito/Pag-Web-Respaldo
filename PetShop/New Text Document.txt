@@ -1,0 +1,32 @@
+# Pagina-Web
+Pagina Web pa animales
+
+HEADER
+1.- index 
+2.- registro 
+3.- nosotros 
+4.- ingresar
+5.- misdatos
+6.- miscompras
+7.- administracion (usuarios, productos, ventas, bodega)
+8.- ropa
+9.- carrito
+
+PAGINAS TOTALES
+
+1.* administracion 
+2.* bodega 
+3.* boleta 
+4.* carrito 
+5.* ficha
+6.* ingresar 
+7.* inicio 
+8.* base
+9.* miscompras 
+10.* misdatos 
+11.* nosotros 
+12.* productos
+13.* registro 
+14.* ropa 
+15.* usuarios
+16.* ventas

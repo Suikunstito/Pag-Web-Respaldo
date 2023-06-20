@@ -1,0 +1,27 @@
+1.- SEGUIR DOCUMENTO: INSTALAR PYTHON, COMENZAR PROYECTO HASTA ABRIR VSC Y CONFIGURAR settings.py
+	CAMBIAR A Command Prompt Y CREAR ARCHIVOS s.bat y m.bat
+
+2.- DENTRO DE VSC, EN LA CARPETA 'PetShop':
+	DENTRO DE core CREAMOS static Y DENTRO CREAMOS core, 
+	DENTRO DE core CREAMOS css, images Y js, Y MIGRAMOS TODO ADENTRO
+	,
+	DENTRO DE core CREAMOS templates Y DENTRO CREAMOS core,
+	DENTRO DE core MIGRAMOS TODOS LOS HTMLS 
+	,
+	SEGUIR DOCUMENTO (Crear URLs para acceder a los templates (páginas web))
+	, 
+	EJECUTAR LOS ARCHIVOS CREADOS m.bat y s.bat EN LA TERMINAL (m y s, o
+	python manage.py makemigrations
+	python manage.py migrate
+	python manage.py runserver
+	)
+	,
+	*EL PROFE PUSO:
+	"poner en la primera linea de todos los HTML {% load static %}
+	las urls se escriben asi <a href="{% url 'index'%}">
+	los otros vinculos son asi:
+	<img src="{% static 'core/images/logo.jpg' %}">
+	<style src="{% static 'core/css/style.css' %}">
+	<script src="{% static 'core/js/style.js' %}">"*
+	
+

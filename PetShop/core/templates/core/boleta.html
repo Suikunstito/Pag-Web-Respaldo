@@ -1,0 +1,140 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+<!--CSS-->
+{% block stylesheet %}
+<link href="{% static 'core/css/Style.css'%}" rel="stylesheet">
+<style>
+    .circles-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    label {
+        position: relative;
+    }
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .checkmark {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px solid black;
+        margin-right: 50px;
+    }
+
+    input[type="checkbox"]:checked+.checkmark {
+        background-color: green;
+        border-color: green;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<main style="height: 120vh">
+    <div class="container nav-carrito">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top: 100px;">
+                <h1>Detalle de boleta 351</h1>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin-top: 120px; ">
+                <div class="circles-container">
+                    <label>
+                        <input type="checkbox" name="circle1">
+                        <span class="checkmark text-center"><br>Vendido</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="circle2">
+                        <span class="checkmark text-center"><br>Despacho</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="circle3">
+                        <span class="checkmark text-center"><br>Entregado</span>
+                    </label>
+                </div>
+            </div>
+
+            <table class="table table-dark table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Categoría</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">%Subscripción</th>
+                        <th scope="col">%Oferta</th>
+                        <th scope="col">%Desc total</th>
+                        <th scope="col">Descuentos</th>
+                        <th scope="col">Precio a pagar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Perros</td>
+                        <td>Royal canin</td>
+                        <td>$50.00</td>
+                        <td>$100.00</td>
+                        <td>$100.00</td>
+                        <td>$100.00</td>
+                        <td>$100.00</td>
+                        <td>$100.00</td>
+                    </tr>
+                    <tr>
+                        <td>Gatos</td>
+                        <td>whyska</td>
+                        <td>$20.00</td>
+                        <td>$20.00</td>
+                        <td>$20.00</td>
+                        <td>$20.00</td>
+                        <td>$20.00</td>
+                        <td>$20.00</td>
+                    </tr>
+                    <tr>
+                        <td>Peces</td>
+                        <td>koy royal</td>
+                        <td>$30.00</td>
+                        <td>$30.00</td>
+                        <td>$20.00</td>
+                        <td>$20.00</td>
+                        <td>$20.00</td>
+                        <td>$20.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="container overflow-hidden text-center">
+                <div class="row gx-5">
+                    <div class="col">
+                        <div class="p-3"></div>
+                    </div>
+                    <div class="col">
+                        <div style="text-align: left;">
+                            <table class="table table-dark table-striped table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">Precio sin IVA</th>
+                                        <td>$150.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">Valor del IVA</th>
+                                        <td>$30.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">Total a pagar</th>
+                                        <td>$180.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
+{% endblock %}

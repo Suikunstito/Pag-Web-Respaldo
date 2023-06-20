@@ -1,0 +1,87 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+<!--CSS-->
+{% block stylesheet %}
+<link href="{% static 'core/css/Style.css'%}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container" style="position:relative; top:75px ;height: 120vh; padding-top: 20px;">
+    <div class="row">
+        <h1>Mantenedor de Bodega</h1>
+        <div class="row row-cols-2">
+            <div class="col">
+                <form method="POST" id="formulario1" action="recibir_datos">
+                    <div class="form-group" style="padding-top: 20px;">
+                        <label for="selectExample">Categoria</label>
+                        <select class="form-control" id="selectExample">
+                            <option value="">Selecciona una opción</option>
+                            <option value="opcion1">Perro</option>
+                            <option value="opcion2">Gato</option>
+                            <option value="opcion3">Ave</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="padding-top: 20px;">
+                        <label for="selectExample">Nombre</label>
+                        <select class="form-control" id="selectExample">
+                            <option value="">Selecciona una opción</option>
+                            <option value="opcion1">Saco alimento Royan Canin</option>
+                            <option value="opcion2">Cat Chow</option>
+                            <option value="opcion3">Mazuri</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="padding-top: 20px;">
+                        <label for="cant">Cantidad</label>
+                        <input type="text" id="cant" name="cant" class="form-control" placeholder="Ingrese la cantidad"
+                            value="" />
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <button id="id_btnenviar" type="submit" class="btn btn-primary">
+                            Nuevo
+                        </button>
+                        <button id="id_btnlimpiar" type="submit" class="btn btn-primary">
+                            Agregar
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col"><img src="{% static 'core/img/alien.png'%}" alt="alien" style="width: 300px; height: 300px"></div>
+        </div>
+
+        <div class=" nav-tabla row" style="padding-top: 40px;">
+            <div class="col-12">
+                <table class="table table-dark table-hover table-striped table-bordered"
+                    style="width: 100%; table-layout: fixed;">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">ID</th>
+                            <th style="width: 100px;">Categoria</th>
+                            <th style="width: 200px;">Nombre</th>
+                            <th style="width: 100px;">Estado</th>
+                            <th style="width: 80px;">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>27</td>
+                            <td>Perros</td>
+                            <td>Saco alimento Royan Canin</td>
+                            <td>Vendido</td>
+                            <td><a href="">Eliminar</a></td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>Gato</td>
+                            <td>Saco alimento don cuchito</td>
+                            <td>En bodega</td>
+                            <td><a href="">Eliminar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

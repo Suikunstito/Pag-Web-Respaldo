@@ -1,0 +1,119 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+<!--CSS-->
+{% block stylesheet %}
+<link href="{% static 'core/css/Style.css'%}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h1 style="padding: 20px; margin-top: 100px;">Mantenedor De Productos</h1>
+                        <!-- Inicio form -->
+                        <form method="POST" id="formulario1" action="recibir_datos">
+                            <div class="form-group">
+                                <br>
+                                <label for="ID">ID</label>
+                                <input type="text" id="ID" name="ID" class="form-control" placeholder="Ingrese el ID"
+                                    value="" />
+                            </div>
+                            <div class="form-group">
+                                <br>
+                                <label for="selectExample">Categoria</label>
+                                <select class="form-control" id="selectExample">
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="opcion1">Perro</option>
+                                    <option value="opcion2">Gato</option>
+                                    <option value="opcion3">Ave</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <br>
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nom" name="nom" class="form-control"
+                                    placeholder="Ingrese su nombre aquí" value="" />
+                            </div>
+                            <div class="from-group">
+                                <br>
+                                <label for="desc">Descripcion</label>
+                                <textarea class="form-control" name="desc" id="desc" cols="5" rows="2"
+                                    placeholder="Ingrese una Descripcion"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <br>
+                                <label for="precio">Precio</label>
+                                <input type="text" id="precio" name="precio" class="form-control"
+                                    placeholder="Ingrese el Precio" value="" />
+                            </div>
+                            <div class="form-group">
+                                <br>
+                                <label for="descuentosub">Descuento Subscriptoe</label>
+                                <input type="text" id="descuentosub" name="descuentosub" class="form-control"
+                                    value="5%" />
+                            </div>
+                            <div class="form-group">
+                                <br>
+                                <label for="descoferta">Descuento por Oferta</label>
+                                <input type="text" id="descoferta" name="descoferta" class="form-control" value="2%" />
+                            </div>
+
+
+                            <br>
+                            <button id="id_btnEnviar" type="submit" class="btn btn-primary">
+                                Guardar
+                            </button>
+                            <button id="id_btnNuevo" type="submit" class="btn btn-primary">
+                                Nuevo
+                            </button>
+                            <button id="id_btneLiminar" type="submit" class="btn btn-primary">
+                                Eliminar
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <img src="{% static 'core/img/alien.png' %}" alt="alien" style="width: 300px; height: 300px; margin-top: 250px;">
+                        <input type="file" value="Examinar" style="margin-top: 100px;"
+                            class="btn btn-primary form-control-file ">
+                    </div>
+                </div>
+            </div>
+            <div class=" nav-tabla row">
+                <div class="col-12">
+                    <table class="table table-dark table-hover table-striped table-bordered"
+                        style="width: 100%; table-layout: fixed;">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px;">ID</th>
+                                <th style="width: 100px;">Categoria</th>
+                                <th style="width: 100px;">Nombre</th>
+                                <th style="width: 200px;">Descripcion</th>
+                                <th style="width: 80px;">Precio</th>
+                                <th style="width: 160px;">% Desc Subscriptor</th>
+                                <th style="width: 130px;">% Desc Oferta</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>27</td>
+                                <td>Perros</td>
+                                <td>Saco alimento Royan Canin</td>
+                                <td>Saco Royan Canin de 3 kilos</td>
+                                <td>$8000</td>
+                                <td>5%</td>
+                                <td>2%</td>
+                                <!--<td colspan="7" class="text-center">No hay datos disponibles</td>-->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+<!--CSS-->
+{% block stylesheet %}
+<link href="{% static 'core/css/Style.css'%}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<main style="margin-top: 80px; ">
+    <h1>Ropa para sibaritas</h1>
+    <br><br>
+
+    <table id="tblCategorias" border="1px">
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            $.get("http://fakestoreapi.com/products", function (data) {
+                var table = '<table>'; // Iniciar la tabla
+
+                data.forEach(function (product, index) {
+                    if (index % 4 === 0) {
+                        // Crear una nueva fila cada 4 productos
+                        table += '<tr>';
+                    }
+
+                    table += `
+      <td>
+        <img class="ropa" src="${product.image}">
+        <br>
+        $${product.price}
+        <br>
+        ${product.title}
+        <br>
+        ${product.category}
+        <br>
+        ${product.description}
+      </td>`;
+
+                    if ((index + 1) % 4 === 0 || (index + 1) === data.length) {
+                        // Cerrar la fila después de cada 4 productos o al final del arreglo
+                        table += '</tr>';
+                    }
+                });
+
+                table += '</table>'; // Cerrar la tabla
+
+                $('#tblCategorias').append(table); // Agregar la tabla al contenedor
+            });
+        });
+    </script>
+</main>
+{% endblock %}

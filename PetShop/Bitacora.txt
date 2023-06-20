@@ -23,5 +23,9 @@
 	<img src="{% static 'core/images/logo.jpg' %}">
 	<style src="{% static 'core/css/style.css' %}">
 	<script src="{% static 'core/js/style.js' %}">"*
-	
+
+
+	administracion123
+
+
 
